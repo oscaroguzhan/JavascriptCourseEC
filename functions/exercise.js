@@ -31,12 +31,12 @@
 */
 
 // function expression
-const calcArea = function(base, height) {
-    return (base * height) /2;
-
-};
-const area = calcArea(5,6);
-console.log(area);
+// const calcArea = function(base, height) {
+    // return (base * height) /2;
+// 
+// };
+// const area = calcArea(5,6);
+// console.log(area);
 
 // Exercise-5
 /* Write a function that converts days into minutes.
