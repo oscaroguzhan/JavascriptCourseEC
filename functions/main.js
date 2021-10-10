@@ -63,3 +63,14 @@ function myCalculator(num1, num2) {
 myCalculator(5,10);  // call the function
 
 // ------------- METHODS -------------
+
+let text = "";  // create empty string
+const fruits = ["apple", "oranges", "strawberry", "melon"];
+
+fruits.forEach(myFunction); // use forEach metod to go through the array and use function as parameter
+
+document.getElementById("demo-2").innerHTML = text;
+
+function myFunction(item, index) {
+    text += index + " : " + item + "<br>";
+}
