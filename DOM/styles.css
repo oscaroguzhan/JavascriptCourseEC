@@ -1,0 +1,12 @@
+h3 {
+    color:white;
+    background-color: black;
+    border: 1px solid red;
+}
+.error{
+    background-color: blue;
+    color:#fff;
+    border: 1px solid black;
+    padding-top: 10px;
+
+}

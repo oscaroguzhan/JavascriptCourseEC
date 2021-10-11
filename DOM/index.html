@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document object model </title>
+</head>
+<body>
+    <h1 id="page-title">Document object Model (DOM) </h1>
+    <h3 class="subtitel">Interacting with the Browser via Javascript</h3>
+    <p>When the html document created the browser create an "document" object that has a lot properties and methods to interact with. </p>
+    <p>DOM also describes how the documents looks in a visual way too. Describes our html page hiearchly as tree of nodes 
+        html(root node) - head and body osv. so if we need to interact with webpage so we need a reference to these nodes.
+    </p>
+    <p>Reach the first p node with querySelector method </p>
+
+    <p class="demo-1">That is another p node that can be reach with class name </p>
+    <div class="demo-1"> Reach the node that has the same class name </div>
+    <div class="content">
+        This will reach these content and manipulate(add an array of people)
+    </div>
+
+    <a href="https.google.se">Google link</a>
+    <p>These element has no class name but i will add through JS (document.classList.add() and style it</p>
+
+    <script src="dom.js"></script>
+</body>
+</html>
