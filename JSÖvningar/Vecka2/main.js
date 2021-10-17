@@ -10,7 +10,7 @@ function rättaProv (namn, elevsPoäng, maxPoäng) {
     }
 }
 
-// create an elever array 
+// create an elever array with många object som var propertys 
 let elever = [
     {namn : "Oscar", Poäng : 77},
     {namn : "Karin", Poäng : 94},
@@ -111,3 +111,47 @@ console.log(sponsorer);
 /* Föräldrarna Faisal, Andreas, Saber och Gabriel efterfrågar information om skolan, för att avgöra om de ska placera sina barn där. Skapa en funktion som heter sendSchoolInfo som tar in ett objekt, och skriver ut ett meddelande i konsolen med skolans namn, antalet lärare och antalet elever. OM skolan inte är ormvänligt ska även ett meddelande skrivas ut för detta (annars skriv ej ut något). OM det är världens bästa skola ska det även skrivas ut ett meddelande där det står “This is the best school in Sweden!” annars skriv ut ett meddelande där det står “It’s not the best school in Sweden, but still good!”
 
 */
+
+function sendSchoolInfo (skolan) {
+    console.log(skolan.namn,skolan.numberOfLärare, skolan.numberOfElever);
+    if(skolan.ormvänlig = "false") {
+        console.log(`Skolan ${skolan.namn} är inte ormvänligt`);
+    } if(skolan.isSwedensBestSkola = "true") {
+        console.log("This is the best scholl in Sweden!");
+    } else {
+        console.log("it is not the best scholl in Sweden, but still god!");
+    }
+}
+sendSchoolInfo(sponsorer);
+
+/*
+<br>Investerarna Aman och Adiba efterfrågar information om skolans maskot, för 
+att avgöra om de vill sponsra skolans e-sportlag. Skapa en funktion som heter 
+sendMascotInfo som tar in ett objekt. Den ska skriva ut objektets namn och ålder 
+i konsolen. OM maskoten är söt, skriv även ut detta i konsolen. (Om maskoten inte 
+är söt, ska inget mer skrivas ut)<br> */
+
+const sendMascotInfo = skolan => {
+    
+    console.log(skolan.maskot.name, skolan.maskot.age);
+    if(skolan.maskot.isCute = "true") {
+        console.log("Maskot är söt");
+    }
+}
+sendMascotInfo(sponsorer);
+// 
+// 
+/* 
+<br>Till elevernas examen önskar lärare Binette göra milkshakes till samtliga 
+elever. Skapa en funktion som tar emot en array av frukter och bär, och gör 
+milkshake av samtliga frukter. T.ex ska “Blueberry” ska bli “Blueberry milkshake”
+, “Banana” ska bli “Banana milkshake” etc.<br>*/
+
+const fruitochBär = ["strawberry", "melon", "banana", "blackberry", "rasperry"];
+const makeMilkshake = fruitochBär.map(item => console.log(`${item} milkshake`));
+
+/*
+<br>(Extra) Gympalärarna Musa och Annika önskar en funktion för att singla slant 
+när eleverna spelar fotboll på idrottslektionerna. Gör en funktion som slumpar 
+fram krona eller klave i konsolen (sannolikheten ska vara 50% för bägge scenarios)
+.<br> */
