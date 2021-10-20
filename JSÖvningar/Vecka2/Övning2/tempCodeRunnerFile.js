@@ -1,0 +1,1 @@
+let SorteradArray = characters.filter(person => {
