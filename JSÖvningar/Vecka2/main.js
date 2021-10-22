@@ -41,6 +41,18 @@ elever.forEach(elev => {
     getResult(elev.namn, elev.Poäng, 100);
 })
 
+// Andra lösning till previous question 
+function gradeTestAdvanced(studentPoints, maxPoints) {
+    if (studentPoints / maxPoints >= 0.95) {
+      console.log("A");
+    } else if (studentPoints / maxPoints >= 0.75) {
+      console.log("C");
+    } else if (studentPoints / maxPoints >= 0.5) {
+      console.log("E");
+    } else {
+      console.log("F");
+    }
+  }
 // QUESTION 2 ----------------------------
 /* Ekonomilärare Semhar och Sauda undervisar i företagsekonomi, och lär deras elever hur man gör en balansrapport med hjälp av debet och kredit. För att se om siffrorna stämmer, vill de gärna ha en funktion som tar in två siffror som argument - debet och kredit - och ser om dessa är lika stora. Om de är lika stora, skriv ut i konsolen att dessa är lika stora. Om debet är större än kredit, skriv ut att så är fallet. Om kredit är större, ska detta skrivas ut istället.
 
@@ -68,7 +80,7 @@ kredit = [67, 23, 78, 99];
 const debitSum = debit.reduce((total, item) => {
     return total + item;
 },0)
-// console.log(debitSum);
+console.log(debitSum);
 let debitTotal = debitSum;
 
 
@@ -155,3 +167,14 @@ const makeMilkshake = fruitochBär.map(item => console.log(`${item} milkshake`))
 när eleverna spelar fotboll på idrottslektionerna. Gör en funktion som slumpar 
 fram krona eller klave i konsolen (sannolikheten ska vara 50% för bägge scenarios)
 .<br> */
+
+let myAllergies = ["jordnötter", "cashewnötter", "Mjölk"];
+let snacks = ["Chocklad", "Banan", "jordnötter"];
+
+snacks.forEach(snack => {
+    myAllergies.forEach(allergy => {
+        if(snack === allergy) {
+            console.log("Danger! Found an allergy: " + allergy);
+        }
+    });
+})
