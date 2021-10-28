@@ -84,6 +84,9 @@ let myProfile = {
   // console.log(myProfile["email"]);
   
   let profileDiv = document.querySelector("#profile");
+  profileDiv.style.border = "2px solid black";
+  profileDiv.style.paddingLeft = "20px";
+  profileDiv.style.marginBottom = "5px";
   
   //For-in loop: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
   
