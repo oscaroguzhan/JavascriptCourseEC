@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;1,600&family=Poppins:ital,wght@0,400;0,500;1,200;1,600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+// define a color function to specify colors that will be used in sass file
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+$colors : (
+    primary : #005dff,
+    accent : #FFF,
+    secondary : red,
+    );
+
+
+body {
+    background-color: color(primary);
+    
+
+    header {
+        display: flex;
+        height: 100px;
+        background-color: color(accent);
+        margin-bottom: 10px;
+
+        .titels{
+            justify-content: center;
+            margin: auto;
+            align-content: center;
+            align-items: center;
+        }
+        #logo {
+            font-weight: bold;
+            font-style: italic;
+            span{
+                color:color(secondary);
+            }
+        }
+    }
+    // main styling
+    .container {
+        display: flex;
+        gap: 10px;
+        justify-content: space-around;
+        width: 100%;
+        height: auto;
+    
+    }
+}
