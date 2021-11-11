@@ -7,7 +7,8 @@
 }
 
 body {
-  background-color: #005dff;
+  background: linear-gradient(100deg, #8052ec, #d161ff);
+  font-family: "Poppins", sans-serif;
 }
 
 body header {
@@ -15,7 +16,7 @@ body header {
   display: -ms-flexbox;
   display: flex;
   height: 100px;
-  background-color: #FFF;
+  background-color: #fff;
   margin-bottom: 10px;
 }
 
@@ -37,17 +38,76 @@ body header #logo {
 }
 
 body header #logo span {
-  color: red;
+  color: #8052ec;
+}
+
+body #newPassanger {
+  background-color: #fff;
+  padding: 30px 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #newPassanger #input {
+  width: auto;
+  height: 40px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #newPassanger #AddBtn {
+  height: 40px;
+  margin-left: 30px;
+  width: 150px;
+}
+
+body #newPassanger #CheckInBtn {
+  height: 40px;
+  margin-left: 30px;
+  width: 150px;
+}
+
+body #newPassanger #FastTrackBtn {
+  height: 40px;
+  margin-left: 30px;
+  width: 150px;
 }
 
 body .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
   height: auto;
+  margin-bottom: 20px;
+}
+
+body .container .row {
+  width: 100%;
+  margin: auto;
+  height: 500px;
+}
+
+body .container .row #flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .row #passengerFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */

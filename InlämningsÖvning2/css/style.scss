@@ -1,52 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;1,600&family=Poppins:ital,wght@0,400;0,500;1,200;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;1,600&family=Poppins:ital,wght@0,400;0,500;1,200;1,600&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 // define a color function to specify colors that will be used in sass file
 @function color($color-name) {
-    @return map-get($colors, $color-name);
+  @return map-get($colors, $color-name);
 }
-$colors : (
-    primary : #005dff,
-    accent : #FFF,
-    secondary : red,
-    );
-
+$colors: (
+  primary: #005dff,
+  accent: #fff,
+  secondary: #8052ec,
+  bg: linear-gradient(100deg, #8052ec, #d161ff),
+);
 
 body {
-    background-color: color(primary);
-    
+  background: color(bg);
+  font-family: "Poppins", sans-serif;
 
-    header {
-        display: flex;
-        height: 100px;
-        background-color: color(accent);
-        margin-bottom: 10px;
+  header {
+    display: flex;
+    height: 100px;
+    background-color: color(accent);
+    margin-bottom: 10px;
 
-        .titels{
-            justify-content: center;
-            margin: auto;
-            align-content: center;
-            align-items: center;
-        }
-        #logo {
-            font-weight: bold;
-            font-style: italic;
-            span{
-                color:color(secondary);
-            }
-        }
+    .titels {
+      justify-content: center;
+      margin: auto;
+      align-content: center;
+      align-items: center;
     }
-    // main styling
-    .container {
-        display: flex;
-        gap: 10px;
-        justify-content: space-around;
+    #logo {
+      font-weight: bold;
+      font-style: italic;
+      span {
+        color: color(secondary);
+      }
+    }
+  }
+  // main styling
+  #newPassanger {
+    background-color: color(accent);
+    padding: 30px 380px;
+    display: flex;
+
+    #input {
+      width: auto;
+      height: 40px;
+      justify-content: flex-start;
+    }
+    #AddBtn {
+      height: 40px;
+      margin-left: 30px;
+      width: 150px;
+    }
+    #CheckInBtn {
+      height: 40px;
+      margin-left: 30px;
+      width: 150px;
+    }
+    #FastTrackBtn {
+      height: 40px ;
+      margin-left: 30px;
+      width: 150px;
+    }
+  }
+  .container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    .row {
         width: 100%;
-        height: auto;
-    
+        margin: auto;
+        height: 500px;
+      #flex {
+          display: flex;
+          justify-content: center;
+      }
+      #passengerFlex {
+        display: flex;
+        justify-content: center;
+      }
     }
+  }
 }
