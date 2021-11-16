@@ -7,10 +7,12 @@ let passangerList = document.querySelector("#passangerList");
 let passangerArray = [];  // create an empty array
 
 // ----------------------------------
-addButton.addEventListener("click", () => {
+addButton.addEventListener("click", (e) => {
+    e.preventDefault();
     let newPassenger = document.createElement("li");
     newPassenger.textContent = inputElement.value;
     passangerArray.push(newPassenger);  // push into array
+
 
     // gå igenom arrayen och skriv ut nya till kön i DOM:en
     passangerArray.forEach(passenger => {
@@ -28,6 +30,7 @@ trackButton.addEventListener("click", (e) => {
     newPassenger.textContent = inputElement.value;
     passangerArray.unshift(newPassenger);  // addera den nya först i arrayen
 
+    
     // skriv ut DOM:en
     passangerArray.forEach(passenger => {
         passangerList.insertBefore(passenger, passangerList.firstChild);
@@ -38,16 +41,13 @@ trackButton.addEventListener("click", (e) => {
 
 // TODO: Alert vid tom list
 
-checkInButton.addEventListener("click", () => {
-    let newPassenger = document.createElement("li")
-    newPassenger.textContent = inputElement.value;
-
+checkInButton.addEventListener("click", (e) => {
+   passangerList.removeChild(passangerList.firstElementChild);
     passangerArray.forEach(passenger => {
-        passangerArray.shift(passenger);
-        passangerList.removeChild(passangerList.childNodes[0]);
-        if (passangerArray.length === 0) {
-            alert("Det finns inga passagerare i kön!");
-        }
+        passangerArray.pop(passenger);
     })
-    
-})
+    e.preventDefault();
+    if (passangerList.children.length === 0) {
+        alert("Det finns inga passagerare i kön!");
+    }
+});
