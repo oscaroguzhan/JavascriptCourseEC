@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;1,600&family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,400;1,600&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #7b4397; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #dc2430, #7b4397);
+  background: linear-gradient(to right, #dc2430, #7b4397);
+  font-family: "Ibarra Real Nova", serif;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.quiz-container {
+    background-color: white;
+    border-radius: 5px;
+    width: 70vw;
+    overflow: hidden;
+}
+.quiz-header {
+    margin: 3rem;
+}
+h2 {
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+
+}
+ul li {
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
+}
+ul li label {
+    cursor: pointer;
+}
+
+#btn_darkMode {
+    background-color: black;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    width: 30%;
+    height: 4vh;
+}
+#btn_next {
+    background-color: blue;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    width: 60%;
+    height: 4vh;
+}

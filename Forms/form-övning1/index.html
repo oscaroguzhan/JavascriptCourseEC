@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Uppgift 1 -->
+    <!-- Skapa ett formulär för att registrera en profil på en webbplats för superhjältar.
+    -->
+
+    <form action="">
+        <!-- mailadress -->
+      <div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required/>
+        </div>
+      <div>
+        <label for="password">Password: </label>
+          <input type="password" name="password" id="password" required/>
+        </div>
+      <div>
+        <label for="password">Confirm: </label>
+          <input type="password" name="password2" id="password2"/>
+        </div>
+      <div>
+        <label for="name">Hero Name:</label>
+          <input type="text" name="heroName" id="name" required/>
+        </div>
+      <div>
+        <label for="description">Description</label>
+          <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        </div>
+      <div>
+        <label for="heroSuitColor">Hero suit color</label>
+          <select name="heroSuitColor" id="heroSuitColor">
+              <option value="röd">red</option>
+              <option value="blå">blue</option>
+              <option value="grön">green</option>
+              <option value="gul">yellow</option>
+          </select>
+      </div>
+      <button type="submit" id="buttonSubmit">Submit</button>
+    </form>
+    
+    <!-- js script -->
+    <script src="main.js"></script>
+  </body>
+</html>

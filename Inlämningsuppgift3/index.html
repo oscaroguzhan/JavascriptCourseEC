@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h2 id="question">Question Text</h2>
+            <!-- två svar alternative -->
+            <ul>
+                <li>
+                   <input class="answer" type="radio" name="answer" id="a">
+                   <label for="a" id="a_text">answer a</label>
+                </li>
+                <li>
+                    <input class="answer" type="radio" name="answer" id="b">
+                    <label for="b" id="b_text">answer b</label>
+                 </li>
+            </ul>
+            <!-- tre svar section -->
+            <!-- fler svar section -->
+            <section class="buttons">
+                <button id="btn_darkMode">Dark Mode</button>
+                <button id="btn_next">Next</button>
+            </section>
+        </div>
+    </div>
+    <!-- js script tag -->
+    <script src="main.js"></script>
+</body>
+</html>
