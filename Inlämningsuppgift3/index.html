@@ -8,25 +8,78 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="quiz-container">
+    <div class="quiz-container" id="quiz">
         <div class="quiz-header">
-            <h2 id="question">Question Text</h2>
-            <!-- två svar alternative -->
-            <ul>
-                <li>
-                   <input class="answer" type="radio" name="answer" id="a">
-                   <label for="a" id="a_text">answer a</label>
-                </li>
-                <li>
-                    <input class="answer" type="radio" name="answer" id="b">
-                    <label for="b" id="b_text">answer b</label>
-                 </li>
-            </ul>
+            <h2>Mini JS /HTML5/CSS3 Quiz</h2>
+             <!-- två svar alternative -->
+            <h3 id="subheader">JS</h3>
+            <div class="question1_3">
+                <span> 1. Javascript must be in the body tag to work</span>
+                <form>
+                    <input type="radio" name="choice" id="choice_correct" value="correct">
+                    <label for="choice_correct">Sant</label>
+                    <input type="radio" name="choice" id="choice_wrong" value="wrong">
+                    <label for="choice_wrong">Falskt</label>
+                </form>
+            </div>
+            <div class="question1_3">
+                <span> 2. 5Price is a valid variable name in javascript</span>
+                <form>
+                    <input type="radio" name="choice" id="choice_correct" value="correct">
+                    <label for="choice_correct">Sant</label>
+                    <input type="radio" name="choice" id="choice_wrong" value="wrong">
+                    <label for="choice_wrong">Falskt</label>
+                </form>
+            </div>
+            <div class="question1_3">
+                <span> 3. An error in code is known as a bug</span>
+                <form>
+                    <input type="radio" name="choice" id="choice_correct" value="correct">
+                    <label for="choice_correct">Sant</label>
+                    <input type="radio" name="choice" id="choice_wrong" value="wrong">
+                    <label for="choice_wrong">Falskt</label>
+                </form>
+            </div>
             <!-- tre svar section -->
+            <h3 id="subheader">HTML</h3>
+            <div class="question">
+                <span> 4. Who is making the Web standards?</span>
+                <form>
+                    <input type="radio" name="choice" id="choice_correct" value="correct">
+                    <label for="choice_correct">The World Wide Web Consortium</label>
+                    <input type="radio" name="choice" id="choice_wrong" value="wrong">
+                    <label for="choice_wrong">Google</label>
+                    <input type="radio" name="choice" id="choice_wrong" value="wrong">
+                    <label for="choice_wrong">Bill Gates</label>
+                </form>
+            </div>
+            <div class="question">
+                <span> 5. What is the largest heading HTML element?</span>
+                <form>
+                    <input type="radio" name="choice" id="choice_correct" value="correct">
+                    <label for="choice_correct">h6</label>
+                    <input type="radio" name="choice" id="choice_wrong" value="wrong">
+                    <label for="choice_wrong">h4</label>
+                    <input type="radio" name="choice" id="choice_wrong" value="wrong">
+                    <label for="choice_wrong">h7</label>
+                </form>
+            </div>
+            <div class="question">
+                <span> 5. Which one is the correct tag to define important text in HTML?</span>
+                <form>
+                    <input type="radio" name="choice" id="choice_correct" value="correct">
+                    <label for="choice_correct">i</label>
+                    <input type="radio" name="choice" id="choice_wrong" value="wrong">
+                    <label for="choice_wrong">important</label>
+                    <input type="radio" name="choice" id="choice_wrong" value="wrong">
+                    <label for="choice_wrong">strong</label>
+                </form>
+            </div>
+            <h3 id="subheader">CSS Vilka är rätt?</h3>
             <!-- fler svar section -->
             <section class="buttons">
-                <button id="btn_darkMode">Dark Mode</button>
-                <button id="btn_next">Next</button>
+                <button id="darkMode">Dark mode</button>
+                <button id="btn_submit">Submit</button>
             </section>
         </div>
     </div>
