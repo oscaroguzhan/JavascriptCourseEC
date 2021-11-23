@@ -11,9 +11,8 @@ let resultText = document.querySelector("#result_Text");
 // DARK MODE BUTTON --------------
 darkButton.addEventListener("click", () => {
     let body = document.body;
-    if(body.style.background !== "black") {
-        body.style.background = "black";
-    }
+    body.classList.toggle("dark_Mode");
+    
 })
 
 submitButton.addEventListener("click", getTotal);

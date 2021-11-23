@@ -21,6 +21,7 @@ body {
     width: 85vw;
     height:95vh;
     overflow: hidden;
+    padding: 0 15px;
 }
 
 h2 {
@@ -32,7 +33,7 @@ h2 {
     grid-template-columns: 2fr 1fr;
 }
 
-#btn_submit,#darkMode,#result_button {
+#btn_submit,#darkMode{
     border-radius: 5px;
     color: #fff;
     border: none;
@@ -51,6 +52,9 @@ h2 {
 }
 #darkMode {
     background-color: black;
+}
+.dark_Mode {
+    background: black;
 }
 #result_button {
     background-color: #dc2430;
