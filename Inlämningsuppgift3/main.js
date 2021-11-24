@@ -7,7 +7,6 @@ let submitButton = document.querySelector("#btn_submit");
 let resultText = document.querySelector("#result_Text");
 
 
-
 // DARK MODE BUTTON --------------
 darkButton.addEventListener("click", () => {
     let body = document.body;
@@ -41,17 +40,25 @@ function getTotal() {
     else {
         alert("Last question have several answers. Please choose the right ones!")
     }
-    let totalScore = document.createElement("p");
-    totalScore.style.border = "1px solid black";
-    totalScore.style.borderRadius = "5px";
-    totalScore.innerHTML = `You have answered right ${score} / 7 `;
-    container.appendChild(totalScore);
-    if(score === 7) {
-        totalScore.style.color= "green";
-    } else if (score >= 4) {
-        totalScore.style.color = "orange";
-    } else {
-        totalScore.style.color = "red";
+
+    function showScores() {
+        let quizEndHTML = 
+        `
+        <h1 id="score-header">Quiz Completed</h1>
+        <h2 id:"score" class="scoreText">You scored : ${score} of 7 </h2>
+        <div class="quiz-repeat">
+        <a href="index.html">Repeat quiz again! </a>
+        </div>
+        `;
+        let quizElement = document.getElementById("quiz");
+        quizElement.innerHTML = quizEndHTML;
+        if(score===7) {
+            quizElement.style.color = "green";
+        } else if(score >=4 ) {
+            quizElement.style.color = "orange";
+        } else {
+            quizElement.style.color = "red";
+        }
     }
-    
+    showScores();
 }
