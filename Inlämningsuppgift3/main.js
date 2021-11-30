@@ -1,21 +1,19 @@
 // GET ELEMENTS FROM DOM
 let container = document.querySelector('.quiz-container');
-let darkButton = document.getElementById("darkMode");
 let radioButtons = document.querySelectorAll('[name="choice"]');
+
 let checkboxes = document.querySelectorAll('[type="checkbox"]');
 let submitButton = document.querySelector("#btn_submit");
 let resultText = document.querySelector("#result_Text");
 
 
 // DARK MODE BUTTON --------------
-darkButton.addEventListener("click", () => {
-    let body = document.body;
-    body.classList.toggle("dark_Mode");
-    
-})
+let darkMode = document.getElementById("checkbox");
+darkMode.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+});
 
-submitButton.addEventListener("click", getTotal);
-
+let radioList = [];
 function getTotal() {
     let score = 0;
     if(document.getElementById("choice_correct1").checked) {
@@ -27,7 +25,11 @@ function getTotal() {
     if(document.getElementById("choice_correct3").checked) {
         score++;
     }
+    
     radioButtons.forEach(radioBtn => {
+        if(radioBtn.checked) {
+            radioList.push;
+        }
         if(radioBtn.checked && radioBtn.value === "correct") {
             score++;
         }
@@ -38,14 +40,14 @@ function getTotal() {
         score++;
     }
     else {
-        alert("Last question have several answers. Please choose the right ones!")
+        alert("Please choose all correct answers for the last question!")
     }
 
     function showScores() {
         let quizEndHTML = 
         `
         <h1 id="score-header">Quiz Completed</h1>
-        <h2 id:"score" class="scoreText">You scored : ${score} of 7 </h2>
+        <h2 id:"score">You scored : ${score} of 7 </h2>
         <div class="quiz-repeat">
         <a href="index.html">Repeat quiz again! </a>
         </div>
@@ -62,3 +64,5 @@ function getTotal() {
     }
     showScores();
 }
+
+submitButton.addEventListener("click", getTotal);

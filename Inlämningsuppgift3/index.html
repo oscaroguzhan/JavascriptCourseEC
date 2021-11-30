@@ -5,12 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
+    <script
+      src="https://kit.fontawesome.com/6ad3885200.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="quiz-container" id="quiz">
       <div class="quiz-header">
         <h2>Mini JS /HTML5/CSS3 Quiz</h2>
+        <div class="changeMode">
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label for="checkbox" class="label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
         <!-- två svar alternative -->
         <h3 id="subheader">JS</h3>
         <div class="question1_3">
@@ -56,14 +68,14 @@
           <form>
             <input
               type="radio"
-              name="choice3"
+              name="choice"
               id="choice_correct3"
               value="correct"
             />
             <label for="choice_correct3">Sant</label>
             <input
               type="radio"
-              name="choice3"
+              name="choice"
               id="choice_wrong3"
               value="wrong"
             />
@@ -143,7 +155,6 @@
           <label for="choice4">Easy Maintenance</label>
         </form>
         <section class="buttons">
-          <button id="darkMode">Dark mode</button>
           <button id="btn_submit">Submit</button>
 
         </section>
