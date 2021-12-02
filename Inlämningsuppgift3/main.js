@@ -13,7 +13,7 @@ darkMode.addEventListener("change", () => {
   document.body.classList.toggle("dark");
 });
 
-let radioList = [];
+submitButton.addEventListener("click", getTotal);
 function getTotal() {
     let score = 0;
     if(document.getElementById("choice_correct1").checked) {
@@ -25,15 +25,19 @@ function getTotal() {
     if(document.getElementById("choice_correct3").checked) {
         score++;
     }
+    if(document.getElementById("choice_correct4").checked) {
+        score++;
     
-    radioButtons.forEach(radioBtn => {
-        if(radioBtn.checked) {
-            radioList.push;
-        }
-        if(radioBtn.checked && radioBtn.value === "correct") {
-            score++;
-        }
-    })
+    }
+    if(document.getElementById("choice_correct5").checked) {
+        score++;
+    
+    }
+    if(document.getElementById("choice_correct6").checked) {
+        score++;
+    
+    }
+    
     if(
         document.getElementById("choice1").checked && document.getElementById("choice3").checked && document.getElementById("choice4").checked
     ) {
@@ -65,4 +69,4 @@ function getTotal() {
     showScores();
 }
 
-submitButton.addEventListener("click", getTotal);
+

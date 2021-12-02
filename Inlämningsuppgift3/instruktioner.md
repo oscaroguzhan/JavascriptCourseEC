@@ -4,9 +4,7 @@
 
 ..* Quizet ska innehålla 7 frågor.
 ..* Användaren ska utöver att besvara frågor för quizet, även kunna byta utseende på sidan mellan dark mode (dvs mörk bakgrundsfärg med ljus text ) och light mode (ljus bakgrundsfärg med mörk text).
-
 ..* Tre frågor ska bestå av ett påstående. Under påståendet det finnas två svarsalternativ: Sant och falskt.
-
 ..* Tre frågor ska ha tre svarsalternativ.
 
 ..* En fråga ska besvaras med checkboxar (minst fyra svarsalternativ). För att få rätt på denna fråga, behöver samtliga rätta svarsalternativ vara ifyllda, varken fler eller mindre.
