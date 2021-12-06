@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <title>EC Utbildning | Indiviual Project work</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="content-container">
+        <h2 id="h2">HITTA UTBILDNING - YRKESHÖGSKOLAN / PROJEKTARBETE!</h2>
+        <h3 id="h3">Elever</h3>
+        <ul class="elevList"></ul>
+      </div>
+      <!-- filter section starts-->
+      <div class="filter-container">
+        <h3>Filtera elevarna i listan baserat på utbildning</h3>
+        <div class="radioBtn_schools">
+          <input type="radio" name="programme" id="option1" value="Frontend" />
+          <label for="option1">Frontend</label>
+          <input type="radio" name="programme" id="option2" value=".NET" />
+          <label for="option1">.NET</label>
+          <input type="radio" name="programme" id="option3" value="Backend" />
+          <label for="option1">Backend</label>
+          
+        </div>
+        <div id="filter_Div">
+          <button id="filter_Btn">Filter</button>
+        </div>
+      </div>
+      <!-- filter section ends-->
+
+      <div class="sortera-container">
+        <h3>Sortera elevarna i listan baserat på följande kriterna</h3>
+      </div>
+      <div id="sorter_Btns">
+        <button id= "age_sort_btn" class="btn">Sort by age</button>
+        <button id= "firstName_sort_btn" class="btn">Sort by first name </button>
+        <button id= "lastName_sort_btn"class="btn">Sort by  last name </button>
+      </div>
+    </div>
+    <!-- js script tag-->
+    <script src="main.js"></script>
+  </body>
+</html>
