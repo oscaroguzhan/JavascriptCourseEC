@@ -3,6 +3,9 @@ let h3 = document.getElementById("h3");
 let elevList = document.querySelector(".elevList");
 let radioBtnsProgramme = document.querySelectorAll('[name="programme"]');
 let filterBtn = document.getElementById("filter_Btn");
+let sortAlternative = document.getElementById('sorter_val');
+let sortRadioBtns = document.querySelectorAll('[name="sorter"]');
+
 sortAgeBtn = document.getElementById("age_sort_btn");
 sortFirstNameBtn = document.getElementById("firstName_sort_btn");
 sortLastNameBtn = document.getElementById("lastName_sort_btn");
@@ -45,7 +48,7 @@ async function chooseData() {
     radioBtnsProgramme.forEach((btn) => {
       if (btn.checked) {
         let programme = btn.value;
-        //console.log(programme); kontrolutskrift
+        console.log(programme); //kontrolutskrift
 
         // filter students based on programme
         let filteredbyProgramme = students.filter(
@@ -62,14 +65,22 @@ async function chooseData() {
       }
     });
   });
-
+  
   // sort section
   sortAgeBtn.addEventListener("click", () => {
     displayNoneH3();
     elevList.innerHTML = "";
+    // -----
+    sortRadioBtns.forEach((btn) => {
+      if(btn.checked) {
+        let sortType = btn.value;
+        console.log(sortType);
+      }
+    })
+    //-----
     // sort the array by age
     students.sort((student1, student2) =>
-      student1.age > student2.age ? 1 : -1
+      student1.age > student2.age ? -1 : 1
     );
     students.forEach((student) => {
       let sortedStudentsByAge = document.createElement("li");
