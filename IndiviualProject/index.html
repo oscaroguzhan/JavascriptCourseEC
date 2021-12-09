@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    
+
     <title>EC Utbildning | Indiviual Project work</title>
   </head>
   <body>
@@ -24,7 +24,6 @@
           <label for="option1">.NET</label>
           <input type="radio" name="programme" id="option3" value="Backend" />
           <label for="option1">Backend</label>
-          
         </div>
         <div id="filter_Div">
           <button id="filter_Btn">Filter</button>
@@ -37,18 +36,29 @@
       </div>
       <div class="sorterOption">
         <form id="sorter_val">
-          <input type="radio" name="sorter" id="stigande" value="stigande">
+          <input type="radio" name="sorter" id="stigande" value="stigande" />
           <label for="stigande">Stigande</label>
-          <input type="radio" name="sorter" id="fallande" value="fallande">
+          <input type="radio" name="sorter" id="fallande" value="fallande" />
           <label for="fallande">Fallande</label>
         </form>
       </div>
       <div id="sorter_Btns">
-        <button id= "age_sort_btn" class="btn">Sort by age</button>
-        <button id= "firstName_sort_btn" class="btn">Sort by first name </button>
-        <button id= "lastName_sort_btn"class="btn">Sort by  last name </button>
+        <button id="age_sort_btn" class="btn">Sort by age</button>
+        <button id="firstName_sort_btn" class="btn">Sort by first name</button>
+        <button id="lastName_sort_btn" class="btn">Sort by last name</button>
       </div>
-      
+      <hr />
+      <div id="choose_school">
+        <form>
+          <input
+            type="text"
+            name="studentName"
+            id="studentName"
+            placeholder="Search student"
+          >
+          <button id="searchBtn">Search</button>
+        </form>
+      </div>
     </div>
     <!-- js script tag-->
     <script src="main.js"></script>
