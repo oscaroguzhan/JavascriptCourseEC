@@ -88,7 +88,7 @@ async function chooseData() {
             // display sorted students in DOM
             filteredbyProgramme.forEach((student) => {
               let sortedStudentsByAge = document.createElement("li");
-              sortedStudentsByAge.innerHTML = `${student.firstName} ${student.lastName} är <span id="age">${student.age}</span>`;
+              sortedStudentsByAge.innerHTML = `${student.firstName} ${student.lastName} är <span id="age"><strong>${student.age}</strong></span>`;
               let newTitel = document.querySelector("#h2");
               newTitel.innerHTML = `Elever sorterad baserad på sin ålder`;
               elevList.append(sortedStudentsByAge);
@@ -177,22 +177,27 @@ async function chooseData() {
               let lowerCaseStudentFirstName = student.firstName.toLowerCase();
               if (lowerCaseStudentFirstName === inputName) {
                 //console.log(student.hobbies);
+
+                let chosenSchool = document.createElement("li");
                 schools.forEach((school) => {
                   if (
                     student.hobbies.every((match) =>
                       school.activities.includes(match))
                   ) {
+                    //FIXME: Display all schools that match not the first one //
+
                     console.log(school);
                     displayNoneH3();
                     elevList.innerHTML = "";
-                    let chosenSchool = document.createElement("li");
+                    
                     chosenSchool.textContent = school.name;
                     let newTitel = document.querySelector("#h2");
                     newTitel.innerHTML = `Recommended Schools that has similiar activities for <div id= "student_name">${student.firstName}</div>`;
-                    elevList.append(chosenSchool);
+                    
                   }
-                  
+                  elevList.append(chosenSchool);
                 });
+                
               }
             });
           });

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,600&family=Roboto:ital,wght@0,400;0,500;0,700;1,100&display=swap');
+$primary-color : #007bff;
+$secondary-color : #6610f2;
+$danger : #dc3545;
+$white : #fff;
+$dark : black;
+$warning: #f0ad4e;
+
+strong {
+    color: $dark;
+    font-weight: bolder;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+li {
+    list-style: none;
+}
+
+body {
+    
+    color:$white;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+    
+}
+.main-container {
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+    
+    
+    
+    
+    .content-container {
+        border: 2px solid black;
+        
+        h2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h3, .elevList {
+            margin: 0 1rem 1rem 1rem;
+            padding-bottom: 1rem;
+        }
+        h3 {
+            margin-top: 1rem;
+            border-bottom: 2px solid black;
+            
+        }
+    }
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+        h3, .radioBtn_schools {
+            margin: 1rem;
+        }
+        .radioBtn_schools input {
+            margin-right: 3px;
+        }
+        #filter_Btn {
+            margin-left: 1rem;
+        }
+    }
+    .sortera-container {
+        display: flex;
+        h3 {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    #bottom_picture {
+        width: 100%;
+        
+    }
+    #search_form {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 0.5rem;
+    }
+    #result {
+        display: flex;
+        justify-content: center;
+    }
+}
+
