@@ -175,27 +175,38 @@ async function chooseData() {
             students.forEach((student) => {
               let inputName = studentName.value.toLowerCase();
               let lowerCaseStudentFirstName = student.firstName.toLowerCase();
-              if (lowerCaseStudentFirstName === inputName) {
-                //console.log(student.hobbies);
 
-                let chosenSchool = document.createElement("li");
+              if (lowerCaseStudentFirstName === inputName) {
+                console.log(student.hobbies);
+                // rensa listan 
+                elevList.innerHTML = "";
+
+                
                 schools.forEach((school) => {
+                  /* retunera för det man inte vill ha med Boring school has no activities 
+                  so when i use array method such as every or some de vill sluta loopa as soon as de retunerar false 
+                  därför excluderar den för att hitta passande skolor som har minst en aktivititet */
+                  if(school.name === "Boring School") {
+                    return
+                  }
+
+                  let chosenSchool = document.createElement("li");
                   if (
-                    student.hobbies.every((match) =>
+                    student.hobbies.some((match) =>
                       school.activities.includes(match))
                   ) {
-                    //FIXME: Display all schools that match not the first one //
+                    
 
                     console.log(school);
                     displayNoneH3();
-                    elevList.innerHTML = "";
                     
-                    chosenSchool.textContent = school.name;
+                    
+                    chosenSchool.innerHTML = `<li id= "passande_skol">${school.name}</li>`;
                     let newTitel = document.querySelector("#h2");
                     newTitel.innerHTML = `Recommended Schools that has similiar activities for <div id= "student_name">${student.firstName}</div>`;
-                    
+                    elevList.append(chosenSchool);
                   }
-                  elevList.append(chosenSchool);
+                  
                 });
                 
               }

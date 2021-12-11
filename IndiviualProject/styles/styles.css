@@ -4,7 +4,7 @@ strong {
   font-weight: bolder;
 }
 
-* {
+*, ::after, ::before, :root {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -83,27 +83,55 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .main-container .sortera-container h3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 0 1rem;
+}
+
+.main-container .sortera-container .sorterOption {
+  margin: 1rem;
+}
+
+.main-container .sortera-container .sorterOption #sorter_val {
+  margin-right: 3px;
 }
 
 .main-container #bottom_picture {
   width: 100%;
 }
 
+.main-container #sorter_Btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2rem;
+  margin: 0 1rem;
+}
+
 .main-container #search_form {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 0.5rem;
+  margin: 1rem;
+}
+
+.main-container #search_form #studentName {
+  width: 60rem;
+  height: auto;
 }
 
 .main-container #result {
@@ -113,5 +141,17 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.main-container #passande_skol {
+  margin: 1rem 5rem;
+}
+
+.main-container #passande_skol:hover {
+  color: black;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=styles.css.map */

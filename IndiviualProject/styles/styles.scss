@@ -11,7 +11,7 @@ strong {
     font-weight: bolder;
 }
 
-* {
+*, ::after, ::before, :root {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -70,23 +70,50 @@ body {
     }
     .sortera-container {
         display: flex;
+        flex-direction: column;
         h3 {
-            display: flex;
-            justify-content: center;
+           margin: 0 1rem;
+            
+        }
+        .sorterOption{
+            margin: 1rem;
+            #sorter_val {
+                margin-right: 3px;
+            }
         }
     }
     #bottom_picture {
         width: 100%;
         
     }
+    #sorter_Btns {
+       display: flex;
+       flex-direction: row;
+       gap: 2rem;
+       margin: 0 1rem;
+    }
     #search_form {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
+        display: flex;
+        flex-direction: row;
         gap: 0.5rem;
+        margin: 1rem;
+        #studentName {
+            width: 60rem;
+            height: auto;
+        }
     }
     #result {
         display: flex;
         justify-content: center;
+    }
+    #passande_skol {
+        margin: 1rem 5rem;
+    }
+    #passande_skol:hover {
+        color: $dark;
+        transition: 0.8s;
+        font-size: 1.2rem;
+        font-weight: bolder;
     }
 }
 
