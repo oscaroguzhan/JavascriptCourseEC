@@ -175,7 +175,7 @@ async function chooseData() {
             students.forEach((student) => {
               let inputName = studentName.value.toLowerCase();
               let lowerCaseStudentFirstName = student.firstName.toLowerCase();
-
+              // debugger;
               if (lowerCaseStudentFirstName === inputName) {
                 console.log(student.hobbies);
                 // rensa listan 
